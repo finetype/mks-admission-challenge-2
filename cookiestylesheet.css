@@ -6,6 +6,7 @@
 
 html, body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
+  padding-top:30px;
 }
 
 h2 {
@@ -13,8 +14,6 @@ h2 {
 }
 
 div {
-  margin-bottom: auto;
-  margin-top:auto;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -31,7 +30,7 @@ div {
 }
 
 #globe {
-   width:960px;
+   width:660px;
    margin:0 auto;
    background-color:#DDBDF0;
    border-radius:25px;
