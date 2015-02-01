@@ -17,37 +17,29 @@ var inventory = {
 
 var cookiecheck = function() {
 	if (inventory.pot.sugar<3 && inventory.pot.flour<6){
-		$('#bake-one').fadeTo('fast',.25)
+		$('#bake-one').fadeTo(1,.25)
 	}
 	else if (inventory.pot.sugar>2 && inventory.pot.flour>5){
-		$('#bake-one').fadeTo('.1',.75)
+		$('#bake-one').fadeTo(1,.75)
 	}
 };
 
 cookiecheck();
 
+/*universal button functionality*/
 $('.button').mouseenter(function(){
-	$(this).fadeTo('fast',1)
+	$(this).stop().fadeTo(1,1)
 });
 
-$('#bake-one').mouseenter(function(){
-	$(this).fadeTo('fast',1)
-});
-
-/*console.log all variables*/
 $('.button').click(function(){
-	cookiecheck();
-	//console.log("inventory flour: " + inventory.ingredients.flour + ", inventory sugar: " + inventory.ingredients.sugar + ", pot flour: " + inventory.pot.flour + ", pot sugar: " + inventory.pot.sugar + ", money: " + inventory.product.money + ", cookies: " + inventory.product.cookies)
+	cookiecheck()
 });
 
-/*is broken, doesn't make #bake-one fade down to .25 like it should, seems the if condition is never met*/
 $('.button').mouseleave(function(){
-	{$(this).fadeTo('.1',.5)}
+	{$(this).stop().fadeTo(1,'.5')}
+	cookiecheck()
 });
-
-$('#bake-one').mouseleave(function(){
-		cookiecheck()
-});
+/*------------------------------*/
 
 $('#use-sugar').click(function(){
 	if (inventory.ingredients.sugar>0){
@@ -70,7 +62,7 @@ $('#buy-sugar').click(function(){
 		}
 
 	else {
-		("Dude, you're out of money. Game over.")
+		alert("Dude, you're out of money. Game over.")
 	}
 });
 
@@ -156,7 +148,7 @@ $('#font').click(function(){
     	console.log("fountcount reset to 0")
 
     default:
-        console.log("error with font counter") //Shadows+Into+Light|Gloria+Hallelujah|Indie+Flower|Chewy|Pacifico
+        console.log("error with font counter")
 }
 	fontcount++
 });
