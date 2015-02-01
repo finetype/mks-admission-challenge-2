@@ -21,6 +21,11 @@ div {
   border-color:red;
 }
 
+img {
+  opacity:0;
+  float:left;
+}
+
 /*The regions*/
 
 #globe {

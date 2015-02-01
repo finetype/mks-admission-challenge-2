@@ -106,8 +106,9 @@ $('#bake-one').click(function(){
 		inventory.product.cookies ++
 		document.getElementById("cookies").innerHTML = inventory.product.cookies;
 		document.getElementById("flourpot").innerHTML = inventory.pot.flour;
-		document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;	
-		alert("You made a cookie!")
+		document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;
+		$('img').fadeTo(3000,.5);
+		$('img').fadeTo(5000,0);
 	}
 	else if (inventory.pot.flour==0&&inventory.pot.sugar==0){
 		alert("Uh, can't bake cookies from thin air, bro.")
