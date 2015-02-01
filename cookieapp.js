@@ -83,10 +83,38 @@ $('#bake-one').click(function(){
 		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.sugar + " units of flour, but you need three in there!")
 	}
 })
-
+/*console.log all variables*/
 $('.button').click(function(){	
 	console.log("inventory flour: " + inventory.ingredients.flour + ", inventory sugar: " + inventory.ingredients.sugar + ", pot flour: " + inventory.pot.flour + ", pot sugar: " + inventory.pot.sugar + ", money: " + inventory.product.money + ", cookies: " + inventory.product.cookies)
 })
-
+/*font switcher*/
+var fontcount = 0;
+$('#font').click(function(){
+	switch(fontcount) {
+    case 0:
+  		$(".fontswitch").css("font-family","Chewy")
+        break;
+    case 1:
+  		$(".fontswitch").css("font-family","Pacifico")
+        break;
+    case 2:
+    	$(".fontswitch").css("font-family","Shadows Into Light")
+    	break;
+    case 3:
+    	$(".fontswitch").css("font-family","Gloria Hallelujah")
+    	break;
+    case 4:
+    	$(".fontswitch").css("font-family","Indie Flower")
+    	break;
+    case 5:
+    	$(".fontswitch").css("font-family","Lobster")
+    	break;
+    case 6:
+    	fontcount=0
+    default:
+        console.log("error with font counter") //Shadows+Into+Light|Gloria+Hallelujah|Indie+Flower|Chewy|Pacifico
+}
+	fontcount++
+})
 
 });

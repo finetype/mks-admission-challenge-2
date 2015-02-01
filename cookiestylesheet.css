@@ -8,8 +8,7 @@
 
 body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
-  padding-top:30px;
-  font-family:Lobster;
+   padding-top:30px;
 }
 
 h2 {
@@ -73,4 +72,12 @@ div {
 
 #bake-one {
     background-color: #CC00CC;
+}
+
+#font {
+    background-color: #CC00CC;
+}
+
+.fontswitch {
+  font-family:Lobster;
 }
