@@ -68,5 +68,9 @@ div {
 
 #font {
     background-color: #CC00CC;
+    height:45;
+    width:45;
+    float:right;
+    border-radius:30;
 }
 

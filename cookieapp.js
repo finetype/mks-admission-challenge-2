@@ -28,10 +28,15 @@ cookiecheck();
 
 $('.button').mouseenter(function(){
 	$(this).fadeTo('fast',1)
-})
+});
+
+/*console.log all variables*/
+$('.button').click(function(){
+	cookiecheck();
+	//console.log("inventory flour: " + inventory.ingredients.flour + ", inventory sugar: " + inventory.ingredients.sugar + ", pot flour: " + inventory.pot.flour + ", pot sugar: " + inventory.pot.sugar + ", money: " + inventory.product.money + ", cookies: " + inventory.product.cookies)
+});
 
 /*is broken, doesn't make #bake-one fade down to .25 like it should, seems the if condition is never met*/
-var $bakeone = $('#bake-one')
 $('.button').mouseleave(function(){
 	if ($('this') == $('#bake-one')){cookiecheck()}
 	else {$(this).fadeTo('.1',.5)}
@@ -48,6 +53,8 @@ $('#use-sugar').click(function(){
 	if (inventory.ingredients.sugar>0){
 		inventory.pot.sugar++
 		inventory.ingredients.sugar--
+		document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;		
+		document.getElementById("sugar").innerHTML = inventory.ingredients.sugar;
 	}
 	else{
 		alert("You're out of sugar, you should buy some more!")
@@ -58,7 +65,8 @@ $('#buy-sugar').click(function(){
 	if(inventory.product.money>9){
 		inventory.ingredients.sugar++
 		inventory.product.money -= 10
-		$('.money') = inventory.product.money
+		document.getElementById("money").innerHTML = inventory.product.money;
+		document.getElementById("sugar").innerHTML = inventory.ingredients.sugar; 
 		}
 
 	else {
@@ -70,6 +78,8 @@ $('#use-flour').click(function(){
 	if(inventory.ingredients.flour>0){
 		inventory.pot.flour++
 		inventory.ingredients.flour--
+		document.getElementById("flourpot").innerHTML = inventory.pot.flour;
+		document.getElementById("flour").innerHTML = inventory.ingredients.flour;
 	}
 	else{
 		alert("You're out of flour, you should buy some more!")
@@ -80,6 +90,8 @@ $('#buy-flour').click(function(){
 	if(inventory.product.money>14){
 		inventory.ingredients.flour++
 		inventory.product.money -= 15
+		document.getElementById("money").innerHTML = inventory.product.money;
+		document.getElementById("flour").innerHTML = inventory.ingredients.flour; 
 	}
 
 	else {
@@ -92,34 +104,32 @@ $('#bake-one').click(function(){
 		inventory.pot.flour -= 6
 		inventory.pot.sugar -= 3
 		inventory.product.cookies ++
+		document.getElementById("cookies").innerHTML = inventory.product.cookies;
+		document.getElementById("flourpot").innerHTML = inventory.pot.flour;
+		document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;	
 		alert("You made a cookie!")
 	}
 	else if (inventory.pot.flour==0&&inventory.pot.sugar==0){
-		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you don't have anything in the pot!")
+		alert("Uh, can't bake cookies from thin air, bro.")
 	}
 
 	else if (inventory.pot.flour==1){
-		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.flour + " unit of flour, but you need six in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " unit of flour, but you need six in there!")
 	}
 
 	else if (inventory.pot.sugar==1){
-		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.sugar + " unit of flour, but you need six in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " unit of flour, but you need six in there!")
 	}
 	else if (inventory.pot.flour<6){
-		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.flour + " units of flour, but you need six in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " units of flour, but you need six in there!")
 	}
 
 	else if (inventory.pot.sugar<3){
-		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.sugar + " units of flour, but you need three in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " units of flour, but you need three in there!")
 	}
 	cookiecheck()
 });
 
-/*console.log all variables*/
-$('.button').click(function(){
-	cookiecheck();
-	console.log("inventory flour: " + inventory.ingredients.flour + ", inventory sugar: " + inventory.ingredients.sugar + ", pot flour: " + inventory.pot.flour + ", pot sugar: " + inventory.pot.sugar + ", money: " + inventory.product.money + ", cookies: " + inventory.product.cookies)
-});
 
 /*font switcher*/
 var fontcount = 0;
