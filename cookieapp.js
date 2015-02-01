@@ -121,36 +121,36 @@ $('#bake-one').click(function(){
 
 
 /*font switcher*/
-var fontcount = 0;
+var fontcount = 1;
 $('#font').click(function(){
+		fontcount++
 	switch(fontcount) {
-    case 0:
+    case 1:
   		$("h2").css("font-family","Chewy")
         break;
-    case 1:
+    case 2:
   		$("h2").css("font-family","Pacifico")
         break;
-    case 2:
+    case 3:
     	$("h2").css("font-family","Shadows Into Light")
     	break;
-    case 3:
+    case 4:
     	$("h2").css("font-family","Gloria Hallelujah")
     	break;
-    case 4:
+    case 5:
     	$("h2").css("font-family","Indie Flower")
     	break;
-    case 5:
-    	$("h2").css("font-family","Lobster")
-    	fontcount = 0
-    	break;
     case 6:
-    	fontcount = 0
-    	console.log("fountcount reset to 0")
-
+    	$("h2").css("font-family","Lobster")
+    	break;
+    case 7:
+    	fontcount = 1
+    	console.log("fountcount reset to " + fontcount +", but will be reset to 1 before it loops again.")
+    	$("h2").css("font-family","Chewy")
+        break;
     default:
         console.log("error with font counter")
 }
-	fontcount++
 });
 
 });

@@ -12,7 +12,7 @@ body{
 
 h2, h4 {
 	text-align:center;
-  font-family:Indie Flower;
+  font-family:Chewy;
 }
 
 div {
@@ -71,17 +71,6 @@ img {
 
 #bake-one {
     background-color: #CC00CC;
-    height: 45px;
-    width: 175px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: Verdana, Arial, Sans-Serif;
-    opacity: 0.5;
-    color: #FFFFFF;
-    line-height: 43px;
-    font-size:16;
-    font-family:chewy;
-    box-shadow: 1px 1px 2px 3px #707054;
 }
 
 #font {
