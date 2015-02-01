@@ -24,12 +24,13 @@ div {
 /*The regions*/
 
 #globe {
-   width:660px;
+   width:360px;
    margin:auto;
    background-color:#DDBDF0;
    border-radius:25px;
    text-align:center;
    font-family:Indie Flower;
+   box-shadow: 3px 3px 5px 6px #707054;
 }
 
 /*The buttons*/
@@ -44,6 +45,7 @@ div {
     line-height: 43px;
     font-size:16;
     font-family:chewy;
+    box-shadow: 1px 1px 2px 3px #707054;
 }
 
 #use-sugar {
@@ -72,5 +74,6 @@ div {
     width:45;
     float:right;
     border-radius:30;
+    box-shadow: 3px 3px 5px 6px #707054;
 }
 
