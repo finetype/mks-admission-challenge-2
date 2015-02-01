@@ -1,12 +1,15 @@
+/*The overalls*/
+
 *{
 	/*to cancel out browser built-ins*/
    margin:.5;
    padding:.5;
 }
 
-html, body{
+body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
   padding-top:30px;
+  font-family:Lobster;
 }
 
 h2 {
@@ -18,16 +21,7 @@ div {
 	margin-right:auto;
 }
 
-#sugar {
-	float:left;
-	border-color:blue;
-	border:5px;
-}
-#flour{
-	float:left;
-	border-color:blue;
-	border:5px;
-}
+/*The regions*/
 
 #globe {
    width:660px;
@@ -37,6 +31,17 @@ div {
    text-align:center;
 }
 
+#sugar {
+	float:left;
+	border-color:blue; /*failed experiment to find the sugar 'div' I created and was unable to manipulate.*/
+	border:5px;
+}
+#flour{
+	float:left;
+	border:5px;
+}
+
+/*The buttons*/
 .button {
 	height: 45px;
     width: 175px;

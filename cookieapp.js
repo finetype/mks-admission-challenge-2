@@ -30,7 +30,7 @@ $('#use-sugar').click(function(){
 		inventory.ingredients.sugar--
 	}
 	else{
-		alert("OUT OF INGREDIENTS")
+		alert("You're out of sugar, you should buy some more!")
 	}
 })
 
@@ -42,7 +42,7 @@ $('#buy-sugar').click(function(){
 		}
 
 	else {
-		("NOT ENOUGH MONEY")
+		("Dude, you're out of money. Game over.")
 	}
 })
 
@@ -52,7 +52,7 @@ $('#use-flour').click(function(){
 		inventory.ingredients.flour--
 	}
 	else{
-		alert("OUT OF INGREDIENTS")
+		alert("You're out of flour, you should buy some more!")
 	}
 })
 
@@ -63,7 +63,7 @@ $('#buy-flour').click(function(){
 	}
 
 	else {
-		alert("NOT ENOUGH MONEY")
+		alert("Dude, you're out of money. Game over.")
 	}
 })
 
@@ -72,15 +72,19 @@ $('#bake-one').click(function(){
 		inventory.pot.flour -= 6
 		inventory.pot.sugar -= 3
 		inventory.product.cookies ++
-		alert("MADE A COOKIE")
+		alert("You made a cookie!")
 	}
 
-	else {
-		alert("NOT ENOUGH INGREDIENTS!")
+	else if (inventory.pot.flour<6){
+		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.flour + " units of flour, but you need six in there!")
+	}
+
+	else if (inventory.pot.sugar<3){
+		alert("What are you trying to do? Don't you know how to follow a recipe?! Right now you only have " + inventory.pot.sugar + " units of flour, but you need three in there!")
 	}
 })
 
-$('.button').click(function(){
+$('.button').click(function(){	
 	console.log("inventory flour: " + inventory.ingredients.flour + ", inventory sugar: " + inventory.ingredients.sugar + ", pot flour: " + inventory.pot.flour + ", pot sugar: " + inventory.pot.sugar + ", money: " + inventory.product.money + ", cookies: " + inventory.product.cookies)
 })
 
