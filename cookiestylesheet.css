@@ -1,7 +1,6 @@
 /*The overalls*/
 
 *{
-	/*to cancel out browser built-ins*/
    margin:.5;
    padding:.5;
 }
@@ -11,51 +10,44 @@ body{
    padding-top:30px;
 }
 
-h2 {
+h2, h4 {
 	text-align:center;
+  font-family:Indie Flower;
 }
 
 div {
 	margin-left:auto;
 	margin-right:auto;
+  border-color:red;
 }
 
 /*The regions*/
 
 #globe {
    width:660px;
-   margin:0 auto;
+   margin:auto;
    background-color:#DDBDF0;
    border-radius:25px;
    text-align:center;
-}
-
-#sugar {
-	float:left;
-	border-color:blue; /*failed experiment to find the sugar 'div' I created and was unable to manipulate.*/
-	border:5px;
-}
-#flour{
-	float:left;
-	border:5px;
+   font-family:Indie Flower;
 }
 
 /*The buttons*/
 .button {
-	height: 45px;
+	  height: 45px;
     width: 175px;
     border-radius: 5px;
     text-align: center;
     font-family: Verdana, Arial, Sans-Serif;
     opacity: 0.5;
-
     color: #FFFFFF;
     line-height: 43px;
+    font-size:16;
+    font-family:chewy;
 }
 
 #use-sugar {
     background-color: #FF0000;
-
 }
 
 #buy-sugar {
@@ -78,6 +70,3 @@ div {
     background-color: #CC00CC;
 }
 
-.fontswitch {
-  font-family:Lobster;
-}
