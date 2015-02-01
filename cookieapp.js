@@ -30,6 +30,10 @@ $('.button').mouseenter(function(){
 	$(this).fadeTo('fast',1)
 });
 
+$('#bake-one').mouseenter(function(){
+	$(this).fadeTo('fast',1)
+});
+
 /*console.log all variables*/
 $('.button').click(function(){
 	cookiecheck();
@@ -38,19 +42,12 @@ $('.button').click(function(){
 
 /*is broken, doesn't make #bake-one fade down to .25 like it should, seems the if condition is never met*/
 $('.button').mouseleave(function(){
-	if ($('#bake-one')){
-		cookiecheck()
-		console.log("cookiecheck")
-	}
-	else {$(this).fadeTo('.1',.5)}
-})
+	{$(this).fadeTo('.1',.5)}
+});
 
-/* Working version of mouseleave, but has 'stepped fading' that is undesirable
-$('.button').mouseleave(function(){
-	$(this).fadeTo('.1',.5)
-	cookiecheck();
-})
-*/
+$('#bake-one').mouseleave(function(){
+		cookiecheck()
+});
 
 $('#use-sugar').click(function(){
 	if (inventory.ingredients.sugar>0){
