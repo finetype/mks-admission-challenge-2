@@ -38,7 +38,10 @@ $('.button').click(function(){
 
 /*is broken, doesn't make #bake-one fade down to .25 like it should, seems the if condition is never met*/
 $('.button').mouseleave(function(){
-	if ($('this') == $('#bake-one')){cookiecheck()}
+	if ($('#bake-one')){
+		cookiecheck()
+		console.log("cookiecheck")
+	}
 	else {$(this).fadeTo('.1',.5)}
 })
 
@@ -114,18 +117,14 @@ $('#bake-one').click(function(){
 	}
 
 	else if (inventory.pot.flour==1){
-		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " unit of flour, but you need six in there!")
-	}
-
-	else if (inventory.pot.sugar==1){
-		alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " unit of flour, but you need six in there!")
-	}
-	else if (inventory.pot.flour<6){
-		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " units of flour, but you need six in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cup of flour, but you need six in there!")
 	}
 
 	else if (inventory.pot.sugar<3){
-		alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " units of flour, but you need three in there!")
+		alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " tbsp of sugar, but you need three in there!")
+	}
+	else if (inventory.pot.flour<6){
+		alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cups of flour, but you need six in there!")
 	}
 	cookiecheck()
 });
