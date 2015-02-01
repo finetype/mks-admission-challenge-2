@@ -20,7 +20,7 @@ var cookiecheck = function() {
 		$('#bake-one').fadeTo('fast',.25)
 	}
 	else if (inventory.pot.sugar>2 && inventory.pot.flour>5){
-		$('#bake-one').fadeTo('.1',.50)
+		$('#bake-one').fadeTo('.1',.75)
 	}
 };
 
