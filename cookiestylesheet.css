@@ -8,6 +8,7 @@
 body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
    padding-top:20px;
+   background-color:#66A3FF;
 }
 
 h2, h4 {
@@ -26,24 +27,33 @@ img {
   float:left;
 }
 
-input {
-  margin-bottom:10px;
+p {
+  vertical-align: center;
 }
 
 /*The regions*/
 
 #wrapper {
-  width:70%;
+  width:auto;
   float:center;
+  height:90%;
 }
 
 #globe {
   margin-left: 2%;
   float:left;
+  background-color:#DDBDF0;
 }
 
 #algchal {
-  padding-bottom:10px;
+  float:left;
+  font-family: Gloria Hallelujah;
+  background-color:#000000;
+  color:00FF00;
+}
+
+#algchal h2 {
+  font-family:pacifico;
 }
 
 .main {
@@ -51,11 +61,11 @@ input {
    /*height:90%;*/
    width:360px;
    margin:auto;
-   background-color:#DDBDF0;
    border-radius:25px;
    text-align:center;
    font-family:Indie Flower;
    box-shadow: 3px 3px 5px 6px #707054;
+   height:100%;
 }
 
 /*The buttons*/
@@ -72,7 +82,7 @@ input {
     font-size:16;
     font-family:chewy;
     box-shadow: 1px 1px 2px 3px #707054;
-    /*buttons unclickable*/
+    /*buttons unhighlightable*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -113,5 +123,5 @@ input {
 }
 
 #algchalbutton {
-  background-color: #CC00CC;
+  background-color: #0066FF;
 }
