@@ -76,6 +76,7 @@ h5 {
   font-size:12px;
   font-family:Special Elite;
   margin-left:1%;
+  word-wrap:break-word;
 }
 
 #algchal h2 {
