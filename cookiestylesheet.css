@@ -42,6 +42,10 @@ input {
   float:left;
 }
 
+#algchal {
+  padding-bottom:10px;
+}
+
 .main {
    float:left;
    /*height:90%;*/
@@ -108,3 +112,6 @@ input {
     margin:40px;
 }
 
+#algchalbutton {
+  background-color: #CC00CC;
+}
