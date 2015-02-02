@@ -50,6 +50,11 @@ p {
   font-family: Gloria Hallelujah;
   background-color:#000000;
   color:00FF00;
+  font-size:18px;
+}
+
+#algchal p {
+  font-size:12px;
 }
 
 #algchal h2 {

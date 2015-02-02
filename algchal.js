@@ -25,14 +25,15 @@ $(document).ready(function(){
     var findSmallestDifference = function(arr) {
         var differences = [];
         arr.sort(function(a,b){return a - b});
-        $('#algchalbutton').after('<p>sorting numbers from greatest to least</p>')
-        $('#algchalbutton').after('<p>sorted: ' + arr + '</p>')
+        $('#theline').before('<p>sorting numbers from greatest to least:</p>')
+        $('#theline').before('<p>' + arr + '</p>')
         for(a=0;a<arr.length;a++){
             for(b=a+1;b<arr.length;b++){
                 differences[differences.length] = arr[b] - arr[a];
-                $('#algchalbutton').after('<p>' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
+                $('#theline').before('<p>' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
             } 
         }
+        $('#theline').before('<p>so our differences are ' + differences + '</p>')
         console.log(differences)
         var answer = (differences[0] + differences[1])
         for (d=0;d<differences.length;d++){
@@ -54,7 +55,7 @@ $(document).ready(function(){
             var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"done\" to finish.");
             if (tempvar == "done"){
                 console.log(algArray)
-                document.getElementById("answer").innerHTML = "<hr><b>The smallest difference between that group of numbers is " + findSmallestDifference(algArray) + "</b>";
+                document.getElementById("answer").innerHTML = "<b>The smallest difference between that group of numbers is " + findSmallestDifference(algArray) + "</b>";
             }
             else if (isNaN(tempvar)) {
                 console.log(typeof tempvar)
