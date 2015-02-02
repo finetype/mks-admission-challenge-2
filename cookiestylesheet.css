@@ -7,7 +7,7 @@
 
 body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
-   padding-top:30px;
+   padding-top:20px;
 }
 
 h2, h4 {
@@ -26,9 +26,25 @@ img {
   float:left;
 }
 
+input {
+  margin-bottom:10px;
+}
+
 /*The regions*/
 
+#wrapper {
+  width:70%;
+  float:center;
+}
+
 #globe {
+  margin-left: 2%;
+  float:left;
+}
+
+.main {
+   float:left;
+   /*height:90%;*/
    width:360px;
    margin:auto;
    background-color:#DDBDF0;
@@ -44,6 +60,7 @@ img {
     width: 175px;
     border-radius: 5px;
     text-align: center;
+    vertical-align: center;
     font-family: Verdana, Arial, Sans-Serif;
     opacity: 0.5;
     color: #FFFFFF;

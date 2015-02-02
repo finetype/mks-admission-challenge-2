@@ -5,37 +5,45 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light|Gloria+Hallelujah|Indie+Flower|Chewy|Pacifico' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type="text/css" href='cookiestylesheet.css'/>
     <script type="text/javascript" src="./cookieapp.js"></script>
+    <script type="text/javascript" src="./algchal.js"></script>
   </head>
 
 
   <body>
     <img src=cookiemonsterr.png />
     <div class="button" id="font"><em>F</em></div>
-    <div id="globe">
-    <div id="product">
-      <h2>Money: $<span id="money">error: no JS</span></h2>
-      <h2>Cookies: <span id="cookies">error: no JS</span></h2>
-    </div>
-    <hr>
-    <div>
-      <h2>Ingredients</h2>
-      <h4>Sugar: <span id="sugar">error: no JS</span></h4>
-      <h4>Flour: <span id="flour">error: no JS</span></h4>
-      <span title="Place 1 tbsp of sugar from your supplies into the pot."><div class="button" id="use-sugar">Put 1 tbsp of sugar in pot</div></span>
-      <span title="Spend your money to purchase more sugar for your supplies."><div class="button" id="buy-sugar">Buy 1 tbsp of sugar for $10</div></span>
-      <span title="Place 1 cup of flour from your supplies into the pot."><div class="button" id="use-flour">Put 1 cup of flour in pot</div></span>
-      <span title="Spend your money to purchase more flour for your supplies."><div class="button" id="buy-flour">Buy 1 cup of flour for $15</div></span>
-      <br>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <div>
-      <h2>What's in the pot?</h2>
-      <h4>Tbsp of Sugar: <span id="sugarpot">error: no JS</span></h4>
-      <h4>Cups of Flour: <span id="flourpot">error: no JS</span></h4>
-      <span title="Use 3 units of sugar and 6 units of flour to make a cookie."><div class="button" id="bake-one">Cook me a cookie!</div></span>
-    </div>
+    <div id="wrapper">
+      <div class="main" id="algchal">
+        <h2>Algorithm Challenge</h2>
+        <p>Insert a list of numbers separated by commas</p>
+        <input type="text" id="txt_name"  />
+      </div>
+      <div class="main" id="globe">
+        <div id="product">
+          <h2>Money: $<span id="money">error: no JS</span></h2>
+          <h2>Cookies: <span id="cookies">error: no JS</span></h2>
+        </div>
+        <hr>
+        <div>
+          <h2>Ingredients</h2>
+          <h4>Sugar: <span id="sugar">error: no JS</span></h4>
+          <h4>Flour: <span id="flour">error: no JS</span></h4>
+          <span title="Place 1 tbsp of sugar from your supplies into the pot."><div class="button" id="use-sugar">Put 1 tbsp of sugar in pot</div></span>
+          <span title="Spend your money to purchase more sugar for your supplies."><div class="button" id="buy-sugar">Buy 1 tbsp of sugar for $10</div></span>
+          <span title="Place 1 cup of flour from your supplies into the pot."><div class="button" id="use-flour">Put 1 cup of flour in pot</div></span>
+          <span title="Spend your money to purchase more flour for your supplies."><div class="button" id="buy-flour">Buy 1 cup of flour for $15</div></span>
+          <br>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+          <h2>What's in the pot?</h2>
+          <h4>Tbsp of Sugar: <span id="sugarpot">error: no JS</span></h4>
+          <h4>Cups of Flour: <span id="flourpot">error: no JS</span></h4>
+          <span title="Use 3 units of sugar and 6 units of flour to make a cookie."><div class="button" id="bake-one">Cook me a cookie!</div></span>
+        </div>
+      </div>
     </div>
   </body>
 
