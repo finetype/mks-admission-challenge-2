@@ -54,7 +54,7 @@ $(document).ready(function() {
 	/*Button specific functionalities*/
 	$('#use-sugar').click(function(){
 		if (inventory.ingredients.sugar>0){
-			inventory.pot.sugar++
+			inventory.pot.sugar+=1
 			inventory.ingredients.sugar--
 			document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;		
 			document.getElementById("sugar").innerHTML = inventory.ingredients.sugar;
@@ -154,9 +154,10 @@ $(document).ready(function() {
 	    	$("h2").css("font-family","Lobster")
 	    	break;
 	    case 7:
-	    	fontcount = 1
-	    	console.log("fountcount reset to " + fontcount +".")
-	    	$("h2").css("font-family","Chewy")
+	    	fontcount = 1;
+	    	console.log("fountcount reset to " + fontcount +".");
+	    	$("h2").css("font-family","Chewy");
+			document.getElementById("money").innerHTML = inventory.product.money;
 	        break;
 	    default:
 	        console.log("error with font counter")

@@ -56,10 +56,12 @@ hr {
   background-color:#000000;
   color:00FF00;
   font-size:18px;
+  text-align:left;
 }
 
 #algchal p {
   font-size:12px;
+  font-family:Special Elite;
 }
 
 #algchal h2 {
@@ -134,4 +136,5 @@ hr {
 
 #algchalbutton {
   background-color: #0066FF;
+  margin-bottom:10px;
 }
