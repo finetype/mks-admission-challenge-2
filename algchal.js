@@ -21,22 +21,25 @@ $(document).ready(function(){
         return answer;
     };
     end*/
+
     /*Modified to be more verbose*/
     var findSmallestDifference = function(arr) {
         var differences = [];
         arr.sort(function(a,b){return a - b});
         $('#theline').before('<p>sorting numbers from greatest to least:</p>')
         $('#theline').before('<p>' + arr + '</p>')
-        for(a=0;a<arr.length;a++){
-            for(b=a+1;b<arr.length;b++){
-                differences[differences.length] = arr[b] - arr[a];
-                $('#theline').before('<p>' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
-            } 
+        var a=0, b=0;
+        while(a+1<arr.length){
+            b=a+1
+            differences[differences.length] = arr[b] - arr[a];
+            $('#theline').before('<p>' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
+            a++
         }
+        differences.sort(function(a,b){return a - b})
         $('#theline').before('<p>so our differences are ' + differences + '</p>')
         console.log(differences)
         var answer = (differences[0] + differences[1])
-        for (d=0;d<differences.length;d++){
+        for (d=0;d+1<differences.length;d++){
                 if (differences[d] < differences[d+1]) {
                         var bestOfTwo = differences[d]
                         if (bestOfTwo < answer) {
@@ -49,6 +52,7 @@ $(document).ready(function(){
     /*start jquery*/
     var algArray = [];
     $('#algchalbutton').click(function(){
+
         var tempvar = null;
         var i=0;
         while(tempvar!=="done"){
