@@ -22,40 +22,26 @@ $(document).ready(function(){
     };
     /*end*/
     /*start jquery*/
-    //document.getElementById("bake-one").innerHTML = "derp";
     var algArray = [];
-
     $('#algchalbutton').click(function(){
-        console.log('clicked')
         var tempvar = null;
         var i=0;
-        while(tempvar!=="quit"){
-            var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"quit\" to finish.");
-            if (tempvar == "quit"){
+        while(tempvar!=="done"){
+            var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"done\" to finish.");
+            if (tempvar == "done"){
+                console.log(algArray)
                 document.getElementById("answer").innerHTML = "The smallest difference between that group of numbers is " + findSmallestDifference(algArray);
+            }
+            else if (isNaN(tempvar)) {
+                console.log(typeof tempvar)
+                alert("that's an invalid entry. Only use numerals in your answer, from 0-9, with nothing else, unless exiting with \"done\"")
             }
             else {
             algArray[i] = tempvar;
-            console.log(algArray)
             i++
             };
         }
     })
-
-    /*test, runs the code on page load
-    var tempvar = null, i = 0;
-
-        while (tempvar!=="quit"){
-            console.log("forloop");
-            i++
-            var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"quit\" to finish.");
-            if (tempvar == "quit"){
-                findSmallestDifference(algArray);
-                document.getElementById("answer").innerHTML = result;
-            }
-            else {
-            algArray[i] = tempvar;
-            };
-        };
-        */
 })
+
+/* || "\"done\""*/
