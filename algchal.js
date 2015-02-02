@@ -4,7 +4,7 @@ $(document).ready(function(){
     var findSmallestDifference = function(arr) {
         var differences = [];
         arr.sort(function(a,b){return a - b});
-        $('#theline').before('<p>$> sorting numbers from greatest to least:</p>')
+        $('#theline').before('<hr><p>$> sorting numbers from greatest to least:</p>')
         $('#theline').before('<p>$> ' + arr + '</p>')
         var a=0, b=0;
         while(a+1<arr.length){

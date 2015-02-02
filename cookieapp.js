@@ -157,7 +157,6 @@ $(document).ready(function() {
 	    	fontcount = 1;
 	    	console.log("fountcount reset to " + fontcount +".");
 	    	$("h2").css("font-family","Chewy");
-			document.getElementById("money").innerHTML = inventory.product.money;
 	        break;
 	    default:
 	        console.log("error with font counter")
