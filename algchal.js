@@ -31,11 +31,9 @@ $(document).ready(function(){
         }
     };
     /*start jquery*/
-    var algArray = [];
+    
     $('#algchalbutton').click(function(){
-
-        var tempvar = null;
-        var i=0;
+        var algArray = [], tempvar = null, i=0;
         while(tempvar!=="done"){
             var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"done\" to finish.");
             if (tempvar == "done"){

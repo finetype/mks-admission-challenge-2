@@ -14,7 +14,8 @@ $(document).ready(function() {
 	    flour: 0
 	  }
 	};
-	/* Load Inventory values into index |
+	
+	/* Load Inventory values into DOM |
 	you could remove these and decrease startup load, but having to manually make sure the html/js are the same here any time you 
 	edit the initial inventory properties seems like a bad idea*/
 	document.getElementById("money").innerHTML = inventory.product.money;
