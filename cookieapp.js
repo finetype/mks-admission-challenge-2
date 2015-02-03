@@ -14,7 +14,7 @@ $(document).ready(function() {
 	    flour: 0
 	  }
 	};
-	
+
 	/* Load Inventory values into DOM |
 	you could remove these and decrease startup load, but having to manually make sure the html/js are the same here any time you 
 	edit the initial inventory properties seems like a bad idea*/
@@ -129,39 +129,4 @@ $(document).ready(function() {
 			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cups of flour, but you need 6 in there!")
 		}
 	});
-
-	/*font switcher button is fun, but can obviously be removed if desired.*/
-	var fontcount = 1;
-	$('#fontbutton').click(function(){
-			console.log("ping!")
-			fontcount++
-		switch(fontcount) {
-	    case 1:
-	  		$("h2").css("font-family","Chewy")
-	        break;
-	    case 2:
-	  		$("h2").css("font-family","Pacifico")
-	        break;
-	    case 3:
-	    	$("h2").css("font-family","Shadows Into Light")
-	    	break;
-	    case 4:
-	    	$("h2").css("font-family","Gloria Hallelujah")
-	    	break;
-	    case 5:
-	    	$("h2").css("font-family","Indie Flower")
-	    	break;
-	    case 6:
-	    	$("h2").css("font-family","Lobster")
-	    	break;
-	    case 7:
-	    	fontcount = 1;
-	    	console.log("fountcount reset to " + fontcount +".");
-	    	$("h2").css("font-family","Chewy");
-	        break;
-	    default:
-	        console.log("error with font counter");
-	}
-	});
-
 });

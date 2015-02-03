@@ -37,6 +37,10 @@ p {
 hr {
   margin-top:8px;
   margin-bottom:8px;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 h5 {
@@ -114,7 +118,7 @@ h5 {
     font-size:16;
     font-family:chewy;
     box-shadow: 1px 1px 2px 3px #E6E6E6;
-    /*buttons unhighlightable*/
+    /*button text unhighlightable*/
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -141,17 +145,6 @@ h5 {
 
 #bake-one {
     background-color: #CC00CC;
-}
-
-#fontbutton {
-    background-color: #CC00CC;
-    height:45;
-    width:45;
-    float:left;
-    border-radius:30;
-    box-shadow: 3px 3px 5px 6px #707054;
-    font-size:20;
-    margin:40px;
 }
 
 #algchalbutton {
