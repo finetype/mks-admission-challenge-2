@@ -47,14 +47,14 @@ $(document).ready(function() {
 	});
 
 	$('.button').mouseleave(function(){
-		{$(this).stop().fadeTo(1,'.5')}
+		$(this).stop().fadeTo(1,'.5')
 		cookiecheck()
 	});
 	
 	/*Button specific functionalities*/
 	$('#use-sugar').click(function(){
 		if (inventory.ingredients.sugar>0){
-			inventory.pot.sugar+=1
+			inventory.pot.sugar++
 			inventory.ingredients.sugar--
 			document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;		
 			document.getElementById("sugar").innerHTML = inventory.ingredients.sugar;
@@ -127,12 +127,12 @@ $(document).ready(function() {
 		else if (inventory.pot.flour<6){
 			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cups of flour, but you need six in there!")
 		}
-		cookiecheck()
 	});
 
 	/*font switcher button is fun, but can obviously be removed if desired.*/
 	var fontcount = 1;
 	$('#font').click(function(){
+			console.log("ping!")
 			fontcount++
 		switch(fontcount) {
 	    case 1:

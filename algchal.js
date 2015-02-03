@@ -42,6 +42,9 @@ $(document).ready(function(){
                 if (algArray.length<2) {alert("You need to compare at least 2 numbers..."); tempvar = null}
                 else {
                     document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(algArray) + "<b>";
+                    $('#answer').fadeTo(500,1)
+                    $('#answer').fadeTo(500,.1)
+                    $('#answer').fadeTo(1000,1)
                 }
             }
             else if (isNaN(tempvar)) {
