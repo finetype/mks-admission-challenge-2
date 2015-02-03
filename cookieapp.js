@@ -159,7 +159,7 @@ $(document).ready(function() {
 	    	$("h2").css("font-family","Chewy");
 	        break;
 	    default:
-	        console.log("error with font counter")
+	        console.log("error with font counter");
 	}
 	});
 

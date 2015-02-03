@@ -41,7 +41,7 @@ $(document).ready(function(){
             if (tempvar == "done"){
                 if (algArray.length<2) {alert("You need to compare at least 2 numbers..."); tempvar = null}
                 else {
-                    document.getElementById("answer").innerHTML = "<b>$> The smallest of the list is: " + findSmallestDifference(algArray) + "<b>";
+                    document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(algArray) + "<b>";
                 }
             }
             else if (isNaN(tempvar)) {
