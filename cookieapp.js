@@ -118,20 +118,20 @@ $(document).ready(function() {
 		}
 
 		else if (inventory.pot.flour==1){
-			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cup of flour, but you need six in there!")
+			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cup of flour, but you need 6 in there!")
 		}
 
 		else if (inventory.pot.sugar<3){
-			alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " tbsp of sugar, but you need three in there!")
+			alert("That doesn't look right... Right now you only have " + inventory.pot.sugar + " tbsp of sugar, but you need 3 in there!")
 		}
 		else if (inventory.pot.flour<6){
-			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cups of flour, but you need six in there!")
+			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cups of flour, but you need 6 in there!")
 		}
 	});
 
 	/*font switcher button is fun, but can obviously be removed if desired.*/
 	var fontcount = 1;
-	$('#font').click(function(){
+	$('#fontbutton').click(function(){
 			console.log("ping!")
 			fontcount++
 		switch(fontcount) {
