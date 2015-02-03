@@ -71,6 +71,7 @@ h5 {
   position:absolute;
   left:25%;
   top:25%;
+  margin-right:10px;
   transform: translate(-25%, -25%);
   overflow:hidden;
 }
@@ -96,6 +97,7 @@ h5 {
    box-shadow: 3px 3px 5px 6px #707054;
    height:100%;
    min-width:196px;
+   max-width:400px;
 }
 
 /*The buttons*/
@@ -145,7 +147,7 @@ h5 {
     background-color: #CC00CC;
     height:45;
     width:45;
-    float:right;
+    float:left;
     border-radius:30;
     box-shadow: 3px 3px 5px 6px #707054;
     font-size:20;
