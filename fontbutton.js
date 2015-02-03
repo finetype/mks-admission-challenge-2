@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	$('head').after('<style> #fontbutton{background-color:#CC00CC; box-shadow: 1px 1px 2px 3px #707054; font-size:20; margin:40px; height: 45px; width: 45px; border-radius: 30px; text-align: center; opacity: 0.5; color: #FFFFFF; line-height: 43px; font-family:arial;} </style>');
 
@@ -45,4 +45,4 @@ $(document).ready(function(){
 	        break;
 	    }
     });
-});
+});*/
