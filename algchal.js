@@ -2,19 +2,19 @@ $(document).ready(function(){
     /*Modified to be more verbose; for the pure algorithm itself, see "algorithm-challenge-submission.js" in this zip*/
 //var linecount = 3;
 var findSmallestDifference = function(arr) {
-    var differences = [], a=0, b=1;;
-    arr.sort(function(a,b){return a - b;});
+    var differences = [], i=0;
+    arr.sort(function(x,y){return x - y;});
     $('#theline').before('<hr id="templine"><p id="cal">$> Sorting numbers from greatest to least:</p>');
     $('#theline').before('<p id="cal">$> ' + arr + '</p>');
     $('#theline').before('<p id="cal">$> Determining difference of each pair of closest numbers:</p>');
-    while(b<arr.length){
-        differences[a] = arr[b] - arr[a];
-        $('#theline').before('<p id="cal">$> ' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>');
-        if(differences[a] === 0){$('#theline').before('<p id="cal">$> Found 0, no smaller possible, aborting.</p>');/*linecount++;*/ return 0;}
+    while(i+1<arr.length){
+        differences[i] = arr[i+1] - arr[i];
+        $('#theline').before('<p id="cal">$> ' + arr[i+1] + ' - ' + arr[i] + ' = ' + (arr[i+1]-arr[i]) + '</p>');
+        if(differences[i] === 0){$('#theline').before('<p id="cal">$> Found 0, no smaller possible, aborting.</p>');/*linecount++;*/ return 0;}
         //linecount++
-        a++; b++;
+        i++;
     }
-    differences.sort(function(a,b){return a - b;});
+    differences.sort(function(x,y){return x - y;});
     return differences[0];
 };
     /*UX script*/
