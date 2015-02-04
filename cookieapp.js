@@ -28,23 +28,19 @@ $(document).ready(function() {
 	/*allows feature of #bake-one button special fade properties to remain DRY*/
 	var cookiecheck = function() {
 		if (inventory.pot.sugar<3 && inventory.pot.flour<6){
-			$('#bake-one').fadeTo(1,.25)
+			$('#bake-one').fadeTo(1,.25);
 		}
 		else if (inventory.pot.sugar>2 && inventory.pot.flour>5){
-			$('#bake-one').fadeTo(500,.75)
+			$('#bake-one').fadeTo(250,.75)
 		}
 	};
 
-	/*run at startup to fade #bake-one appropriately depending on inventory*/
+	/*run at startup to fade #bake-one appropriately depending on default inventory*/
 	cookiecheck();
 
 	/*universal button functionalities*/
 	$('.button').mouseenter(function(){
 		$(this).stop().fadeTo(1,1)
-	});
-
-	$('.button').click(function(){
-		cookiecheck()
 	});
 
 	$('.button').mouseleave(function(){
@@ -59,6 +55,7 @@ $(document).ready(function() {
 			inventory.ingredients.sugar--
 			document.getElementById("sugarpot").innerHTML = inventory.pot.sugar;		
 			document.getElementById("sugar").innerHTML = inventory.ingredients.sugar;
+			cookiecheck()
 		}
 		else{
 			alert("You're out of sugar, you should buy some more!")
@@ -84,6 +81,7 @@ $(document).ready(function() {
 			inventory.ingredients.flour--
 			document.getElementById("flourpot").innerHTML = inventory.pot.flour;
 			document.getElementById("flour").innerHTML = inventory.ingredients.flour;
+			cookiecheck()
 		}
 		else{
 			alert("You're out of flour, you should buy some more!")
@@ -114,11 +112,11 @@ $(document).ready(function() {
 			$('img').fadeTo(3000,.5);
 			$('img').fadeTo(5000,0);
 		}
-		else if (inventory.pot.flour==0&&inventory.pot.sugar==0){
+		else if (inventory.pot.flour === 0 && inventory.pot.sugar === 0){
 			alert("Uh, can't bake cookies from thin air, bro.")
 		}
 
-		else if (inventory.pot.flour==1){
+		else if (inventory.pot.flour === 1){
 			alert("That doesn't look right... Right now you only have " + inventory.pot.flour + " cup of flour, but you need 6 in there!")
 		}
 

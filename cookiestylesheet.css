@@ -1,33 +1,33 @@
 /*The overalls*/
 
 *{
-   margin:.5;
-   padding:.5;
+   margin: .5;
+   padding: .5;
 }
 
 body{
    text-align:center; /*I hope you're not using IE6, but just in case... ;)*/
-   background-color:#336699;
-   padding-top:3%;   
+   background-color: #336699;
+   padding-top: 3%;   
 }
 
 h2, h4 {
-	text-align:center;
-  font-family:Chewy;
+	text-align: center;
+  font-family: Chewy;
 }
 
 div {
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img {
-  opacity:0;
-  position:fixed;
-  width:19%;
-  height:33%;
-  top:30px;
-  right:0px;
+  opacity: 0;
+  position: fixed;
+  width: 19%;
+  height: 33%;
+  top: 30px;
+  right: 0px;
 }
 
 p {
@@ -35,8 +35,8 @@ p {
 }
 
 hr {
-  margin-top:8px;
-  margin-bottom:8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -44,68 +44,77 @@ hr {
 }
 
 h5 {
-  text-align:center;
+  text-align: center;
   font-family: Gloria Hallelujah;
-  font-size:70%;
+  font-size: 70%;
 }
+
 /*The regions*/
 
 #wrapper {
-  width:100%;
-  position:relative;
-  height:95%;
-  min-height:660px;
-  min-width:700px;
-  max-height:775px;
+  width: 100%;
+  position: relative;
+  height: 95%;
+  min-height: 660px;
+  min-width: 700px;
+  max-height: 775px;
+}
+
+.main {
+   float: left;
+   width: 30%;
+   margin: auto;
+   border-radius: 25px;
+   text-align: center;
+   font-family: Indie Flower;
+   box-shadow: 3px 3px 5px 6px #707054;
+   height: 100%;
+   min-width: 196px;
+   max-width: 400px;
 }
 
 #globe {
-  background-color:#85A3C2;
-  color:#1B2127;
-  position:absolute;
-  left:72%;
-  top:72%;
+  background-color: #85A3C2;
+  color: #1B2127;
+  position: absolute;
+  left: 72%;
+  top: 72%;
   transform: translate(-72%, -72%);
 }
 
 #algchal {
-  background-color:#000000;
-  color:#00FF00;
-  font-size:20px;
-  text-align:left;
-  position:absolute;
-  left:25%;
-  top:25%;
-  margin-right:10px;
+  background-color: #000000;
+  color: #00FF00;
+  font-size: 20px;
+  text-align: left;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  margin-right: 10px;
   transform: translate(-25%, -25%);
-  overflow:hidden;
+  overflow: hidden;
 }
 
+/*Algchal titles*/
+
 #algchal p {
-  font-size:12px;
-  font-family:Special Elite;
-  margin-left:1%;
-  word-wrap:break-word;
+  font-size: 12px;
+  font-family: Special Elite;
+  margin-left: 1%;
+  word-wrap: break-word;
 }
 
 #algchal h2 {
-  font-family:pacifico;
+  font-family: pacifico;
 }
 
-.main {
-   float:left;
-   width:30%;
-   margin:auto;
-   border-radius:25px;
-   text-align:center;
-   font-family:Indie Flower;
-   box-shadow: 3px 3px 5px 6px #707054;
-   height:100%;
-   min-width:196px;
-   max-width:400px;
+#answer {
+  padding-top: 20px;
+  text-align: center;
 }
 
 /*The buttons*/
+
 .button {
 	  height: 45px;
     width: 175px;
@@ -116,8 +125,8 @@ h5 {
     opacity: 0.5;
     color: #FFFFFF;
     line-height: 43px;
-    font-size:16;
-    font-family:chewy;
+    font-size: 16;
+    font-family: chewy;
     box-shadow: 1px 1px 2px 3px #E6E6E6;
     /*button text unhighlightable*/
     -webkit-touch-callout: none;
@@ -150,11 +159,6 @@ h5 {
 
 #algchalbutton {
   background-color: #0066FF;
-  margin-bottom:10px;
-  margin-top:10px;
-}
-
-#answer {
-  padding-top:5px;
-  text-align:center;
+  margin-bottom:10 px;
+  margin-top: 10px;
 }

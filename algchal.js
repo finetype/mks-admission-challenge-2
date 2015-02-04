@@ -1,39 +1,31 @@
 $(document).ready(function(){
-    /*Modified to be more verbose*/
-    var result;
+    /*Modified to be more verbose; for the pure algorithm itself, see "algorithm-challenge-submission.js" in this zip*/
+    var result, linecount = 3;
     var findSmallestDifference = function(arr) {
         var differences = [];
         arr.sort(function(a,b){return a - b});
-        $('#theline').before('<hr><p>$> sorting numbers from greatest to least:</p>')
-        $('#theline').before('<p>$> ' + arr + '</p>')
+        $('#theline').before('<hr id="templine"><p id="cal">$> sorting numbers from greatest to least:</p>')
+        $('#theline').before('<p id="cal">$> ' + arr + '</p>')
+        $('#theline').before('<p id="cal">$>Determining difference of each pair of closest numbers:</p>')
         var a=0, b=0;
         while(a+1<arr.length){
             b=a+1
             differences[differences.length] = arr[b] - arr[a];
-            $('#theline').before('<p>$> ' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
+            $('#theline').before('<p id="cal">$> ' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
+            linecount++
             a++
         }
         differences.sort(function(a,b){return a - b})
-        $('#theline').before('<p>$> so our sorted list of possible answers contains: ' + differences + '</p>')
-        console.log(differences)
-        var answer = (differences[0] + differences[1])
-        if (differences.length<2){return differences[0]}
-        else{
-            for (d=0;d+1<differences.length;d++){
-                    if (differences[d] < differences[d+1]) {
-                            var bestOfTwo = differences[d]
-                            if (bestOfTwo < answer) {
-                                answer = bestOfTwo;
-                            }
-                    }
-            }
-            return answer;
-        }
+        return differences[0];
     };
-    /*start jquery*/
-    
+    /*UX script*/
+    var clearvar = 0
     $('#algchalbutton').click(function(){
         var algArray = [], tempvar = null, i=0;
+        /*clean up old verbose output if run more than once*/
+        if (clearvar > 0){for(a=0;a<linecount;a++){document.getElementById("cal").remove(this);}document.getElementById("templine").remove(this);linecount=3}
+        clearvar++
+        /*prompt script*/
         while(tempvar!=="done"){
             var tempvar = prompt("Enter a positive or negative integer to add to the array of numbers to be compared, or enter \"done\" to finish.");
             if (tempvar == "done"){
@@ -45,15 +37,16 @@ $(document).ready(function(){
                     $('#answer').fadeTo(1000,1)
                 }
             }
+            else if (tempvar.indexOf(" ") > -1){alert("Please be sure not to enter any spaces in your answer.")}
             else if (isNaN(tempvar)) {
                 console.log(typeof tempvar)
-                alert("that's an invalid entry. Only use numerals in your answer, from 0-9, with nothing else, unless exiting with \"done\"")
+                alert("You entered " + tempvar + ", but that's an invalid entry. Only use numerals in your answer, from 0-9, with nothing else, unless exiting with \"done\"")
             }
             else {
             algArray[i] = tempvar;
             i++
-            };
+            }
         }
-    })
-})
+    });
+});
 /* || "\"done\""*/
