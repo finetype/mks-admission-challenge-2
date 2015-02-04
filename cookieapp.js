@@ -31,7 +31,7 @@ $(document).ready(function() {
 			$('#bake-one').fadeTo(1,.25);
 		}
 		else if (inventory.pot.sugar>2 && inventory.pot.flour>5){
-			$('#bake-one').fadeTo(250,.75)
+			$('#bake-one').fadeTo(250,.75);
 		}
 	};
 
