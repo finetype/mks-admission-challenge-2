@@ -12,6 +12,7 @@ $(document).ready(function(){
             b=a+1
             differences[differences.length] = arr[b] - arr[a];
             $('#theline').before('<p id="cal">$> ' + arr[b] + ' - ' + arr[a] + ' = ' + (arr[b]-arr[a]) + '</p>')
+            if(differences[a] === 0){console.log("algorithm exited because a value of 0 was returned, and no smaller value is possible");linecount++; return 0;};
             linecount++
             a++
         }
@@ -43,8 +44,8 @@ $(document).ready(function(){
                 alert("You entered " + tempvar + ", but that's an invalid entry. Only use numerals in your answer, from 0-9, with nothing else, unless exiting with \"done\"")
             }
             else {
-            algArray[i] = tempvar;
-            i++
+                algArray[i] = tempvar;
+                i++
             }
         }
     });
