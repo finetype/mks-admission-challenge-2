@@ -49,6 +49,19 @@ h5 {
   font-size: 70%;
 }
 
+form {
+  display: inline-block;
+  text-align:left;
+  left:30%;
+  position: relative;
+  width:40%;
+  right:30%;
+}
+
+input {
+  width:100%;
+}
+
 /*The regions*/
 
 #wrapper {
@@ -161,4 +174,9 @@ h5 {
   background-color: #0066FF;
   margin-bottom:10 px;
   margin-top: 10px;
+  width:20%;
+  height: 30px;
+  line-height:30px;
+  vertical-align: center;
+  text-align: center
 }
