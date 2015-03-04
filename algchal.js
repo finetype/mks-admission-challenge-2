@@ -34,7 +34,7 @@ var findSmallestDifference = function(arr) {
             document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(testArray1) + "</b><br><br id=\"invalidBelow\">";
             console.log(rejectArray.length)
             if (rejectArray.length > 0) {
-                $('#theline').before("<p> (The following is/are invalid entrie(s): " + rejectArray + ")</p>");
+                $('#theline').before("<p>$> (Invalid entrie(s): " + rejectArray + ")</p>");
                 console.log(rejectArray)
             }
             $('#answer').fadeTo(500,1); $('#answer').fadeTo(500,.1); $('#answer').fadeTo(1000,1);
