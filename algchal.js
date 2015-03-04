@@ -4,7 +4,7 @@ $(document).ready(function(){
 var findSmallestDifference = function(arr) {
     var i=0, answer = arr[0] + arr[1];
     arr.sort(function(x,y){return x - y;});
-    $('#theline').before('<hr id="templine"><p id="cal">$> Sorting numbers from greatest to least:</p>');
+    $('#theline').before('<hr id="templine"><p id="cal">$> Sorting numbers from least to greatest:</p>');
     $('#theline').before('<p id="cal">$> ' + arr + '</p>');
     $('#theline').before('<p id="cal">$> Determining difference of each pair of closest numbers:</p>');
     while(i+1<arr.length){
