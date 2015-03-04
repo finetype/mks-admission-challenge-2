@@ -31,7 +31,12 @@ var findSmallestDifference = function(arr) {
             $('#answer').fadeTo(500,1); $('#answer').fadeTo(500,.1); $('#answer').fadeTo(1000,1);
         }
         else {
-            document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(testArray1) + "</b><br><br>" + "<p> (The following is/are invalid entrie(s): " + rejectArray + ")</p>";
+            document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(testArray1) + "</b><br><br id=\"invalidBelow\">";
+            console.log(rejectArray.length)
+            if (rejectArray.length > 0) {
+                $('#theline').before("<p> (The following is/are invalid entrie(s): " + rejectArray + ")</p>");
+                console.log(rejectArray)
+            }
             $('#answer').fadeTo(500,1); $('#answer').fadeTo(500,.1); $('#answer').fadeTo(1000,1);
         }        
         /*clean up old verbose output if run more than once
