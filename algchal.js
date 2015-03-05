@@ -17,13 +17,14 @@ $(document).ready(function(){
 
     function algChalFunction(){
         
-        var rejectArray = [], testArray = $('input[name=algchalnum]').val().split(",");
+        var rejectArray = [], testArray = $('input[name=algchalnum]').val().replace(/,/g, " ").split(" ");
         testArray.forEach(function(val){if (!$.isNumeric(val)) rejectArray.push(val)});
-        testArray = testArray.map(Number);
+        testArray = testArray.filter(Number).map(Number);
         testArray1 = testArray.filter(function(val){
             return $.isNumeric(val)
         });
-        var algArray = [], tempvar = null, i=0;
+        
+        var tempvar = null, i=0;
         if (testArray.length<2) {
             document.getElementById("answer").innerHTML = "<b>Aborted because less than 2 numbers were entered.</b>";
             $('#answer').fadeTo(500,1); $('#answer').fadeTo(500,.1); $('#answer').fadeTo(1000,1);
@@ -31,6 +32,7 @@ $(document).ready(function(){
         else {
             document.getElementById("answer").innerHTML = "<b>The smallest difference between those numbers is: " + findSmallestDifference(testArray1) + "</b><br><br id=\"invalidBelow\">";
             console.log(rejectArray.length)
+            //rejectArray = rejectArray.filter(function(val) {return val !== "" || ","});
             if (rejectArray.length > 0) {
                 $('#theline').before("<p>$> (Invalid entrie(s): " + rejectArray + ")</p>");
                 console.log(rejectArray)
