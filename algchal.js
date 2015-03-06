@@ -45,10 +45,10 @@ $(document).ready(function(){
         algChalFunction();
     });
 
-    document.onkeydown=function(){
-    if(window.event.keyCode=='13'){
-        algChalFunction();
+    document.onkeydown=function(e){
+       if(!e){ e = window.event; }
+       if(e.keyCode=='13'){
+           algChalFunction();
+       }
     }
-}
-
 })
